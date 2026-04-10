@@ -3,3 +3,6 @@
 __pycache__/
 *.pyc
 sim_build/
+
+# Hidden cocotb tests live on phinity-takehome_test only
+tests/test_running_mode_hidden.py
