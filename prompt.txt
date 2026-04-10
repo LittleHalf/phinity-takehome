@@ -1,1 +1,22 @@
-“Complete the implementation in sources/dff.sv.”
+“Complete the implementation in sources/running_mode.sv.
+
+The module receives 7-bit input values in the range 0 to 127.
+On each cycle where valid is high, update the count for data_in.
+
+The winner is the value with the highest count seen since reset.
+If multiple values are tied for the highest count, the smallest value is the winner.
+
+On reset:
+- clear all counts
+- set mode_out to 0
+
+If valid is low:
+- ignore data_in
+- hold mode_out unchanged
+
+If change_only is low:
+- mode_out must be updated to the current winner after each valid input
+
+If change_only is high:
+- mode_out must output the current winner only when the winner changes
+- otherwise mode_out must be 0”
